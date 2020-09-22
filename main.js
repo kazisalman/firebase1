@@ -316,7 +316,7 @@ app.get("/adminlogout", (req, res) => {
 )
 
 app.get("/Adminregister", (req, res) => {
-    res.render("admin/Adminregister")
+    res.render("Adminregister")
 })
 
 app.post("/Adminregister", (req, res) => {
@@ -347,8 +347,6 @@ app.get("/Adminhome", (req, res) => {
                 course,
                 image_add: course.image_add,
                 course_name: course.course_name,
-
-
                 course_desc: req.body.course_desc,
                 tutor: course.tutor,
                 price: course.price,
@@ -368,19 +366,13 @@ app.get("/Adminhome", (req, res) => {
 
             })
         }
-
     })
-
-
-
-
     // if (req.isAuthenticated()) {
 
     //     // res.render("admin/Adminhome")
     // } else {
     //     res.redirect("adminlogin")
     // }
-
 })
 
 
