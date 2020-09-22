@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
+const PORT = process.env.PORT || 3000
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -382,10 +383,8 @@ app.get("/Adminhome", (req, res) => {
 
 })
 
-let PORT = process.env.PORT;
-if (PORT == null || port == "") {
-    PORT = 3000;
-}
+
+
 
 app.listen(PORT, function () {
     console.log("Server started on port 3000");
