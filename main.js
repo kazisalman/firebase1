@@ -115,7 +115,7 @@ app.post("/newCourse", function (req, res) {
 
     course.save(function (err) {
         if (!err) {
-            res.redirect("/");
+            res.redirect("/adminhome");
         }
     });
 
