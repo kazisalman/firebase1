@@ -382,7 +382,11 @@ app.get("/Adminhome", (req, res) => {
 
 })
 
+let port = process.env.PORT;
+if (PORT == null || port == "") {
+    PORT = 3000;
+}
 
-app.listen(3000, function () {
+app.listen(PORT, function () {
     console.log("Server started on port 3000");
 });
