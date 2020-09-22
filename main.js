@@ -8,6 +8,9 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const PORT = process.env.PORT || 3000
 const app = express();
 
+const localConnect = "mongodb://localhost/newinsightsDB";
+const mongodbAtlasURL = "mongodb+srv://salman:Mongodb@7866@cluster0.geezf.mongodb.net/insights4allDB?retryWrites=true&w=majority"
+
 app.set('view engine', 'ejs');
 
 
@@ -23,7 +26,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
-mongoose.connect("mongodb://localhost/newinsightsDB", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(localConnect || mongodbAtlasURL, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set("useCreateIndex", true)
 
 const courseSchema = new mongoose.Schema({
