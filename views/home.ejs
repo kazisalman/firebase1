@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/mycss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+
+<body class="main-home ">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top" id="navbar">
+        <a class="navbar-brand" href="#"><img src="/images/in11.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <div id="banner"> <img src="/images/banner.png" alt="" /></div> <br>
+
+
+
+    <div class="allcourse-container">
+        <%  courses.forEach(function(course){ %>
+
+        <a class="course-link" href="/abc/<%=course._id%>">
+
+            <div class="course-container">
+
+                <img class="course-img" src=<%=course.image_add%> />
+                <br></br>
+                <div class="course-name-container">
+                    <h5 style="font-family: 'Kanit', sans-serif; font-size: 20px;color:#05386B;" class="course-name">
+                        <%=course.course_name%> </h5>
+                </div>
+
+                <div class="tutor-price-container">
+                    <div style="font-family: 'Kanit', sans-serif; " class="course-tutor">
+                        <%=course.tutor%></div>
+                    <div style="font-family: 'Kanit', sans-serif;" class="course-price"><%=course.price%></div>
+                </div>
+            </div>
+
+        </a>
+
+
+
+
+        <% }) %>
+
+    </div>
+
+
+
+
+
+
+
+    <br>
+    <a href="/allcourses" class="btn btn-primary">All Courses</a>
+
+
+
+
+
+
+
+
+
+
+    <div class="about-us">
+        <p class="about-us-testimonial">Insights4all is a platform that help young minds and struggling Students to
+            choose thier Career path by listening to thier role models and professionals of specific domain . We help
+            institutes to join with domain experts for Bright Future of thier Student. Students can have one on one
+            online sessions with domain specialist.</p>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

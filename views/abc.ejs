@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/mycss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+    <%- include("partials/nav"); -%>
+
+
+    <div class="course-brochure">
+        <div id="image-container" class="image-container">
+            <img class="single-course-img" src=<%=image_add%> alt="">
+            <a type="button" class="btn btn-lg btn-block" style="background-color: #05386b;color: white;">Enroll Now</a>
+        </div>
+
+        <div id="course-heading" class="course-heading">
+            <h1 style="font-family: 'Lora', serif;"><%=course_name%></h1>
+            <h4 style="font-family: 'Lora', serif;"> <%=course_desc%></h4>
+            <p><%= tutor %></p>
+            <h3 style="font-family: 'Lora', serif;"> <%=price%> /-</h3>
+        </div>
+    </div>
+
+
+    <div style="font-family: 'Lora', serif;" class="what-you-will-learn">
+        <h2 style="text-align: center;">What You Will Learn</h2>
+        <ul>
+            <li><%=desc_1%></li>
+            <li><%=desc_2 %></li>
+            <li><%=desc_3 %></li>
+            <li><%=desc_4 %></li>
+        </ul>
+
+    </div>
+
+    <div style="font-family: 'Lora', serif;" class="course-description">
+        <h2>Course Description</h2>
+        <ul>
+            <li><%=syll_1%></li>
+            <li><%=syll_2 %></li>
+            <li><%=syll_3 %></li>
+            <li><%=syll_4%></li>
+            <li><%=syll_5%></li>
+            <li><%=syll_6 %></li>
+            <li><%=syll_7 %></li>
+            <li><%=syll_8 %></li>
+            <li><%=syll_9 %></li>
+
+        </ul>
+    </div>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
