@@ -256,7 +256,7 @@ app.get("/Adminlogin", (req, res) => {
         if (err) {
             console.log(err)
         } else {
-            res.render("admin/Adminlogin", {
+            res.render("Adminlogin", {
                 image_add: course.image_add,
                 course_name: course.course_name,
                 course_desc: req.body.course_desc,
@@ -343,7 +343,7 @@ app.get("/Adminhome", (req, res) => {
         if (err) {
             console.log(err)
         } else {
-            res.render("admin/Adminhome", {
+            res.render("Adminhome", {
                 course,
                 image_add: course.image_add,
                 course_name: course.course_name,
