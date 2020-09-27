@@ -51,7 +51,8 @@
   font-family: "Kanit", sans-serif;
   line-height: 28px;
   font-family: "Kanit", sans-serif;
-  position: absolute; /* <--- change made */
+  position: absolute;
+  /* <--- change made */
 }
 
 .course-name-container {
@@ -87,18 +88,12 @@
   background-color: #f5f4f0;
 }
 
-.image-container {
+.single-course-img {
   height: 320px;
   width: 500px;
   float: right;
   border-radius: 40px;
-  margin: 3rem 7rem 0 0;
-}
-
-.single-course-img {
-  height: 320px;
-  width: 500px;
-  margin-bottom: 1rem;
+  margin: 3rem 7rem 1rem 0;
 }
 
 #course-heading {
@@ -130,6 +125,11 @@
   line-height: 2.5rem;
 }
 
+#enroll-now-btn {
+  position: relative;
+  top: 300px;
+  width: 30%;
+}
 @media only screen and (max-width: 600px) {
   .course-name-container {
     position: relative !important;
@@ -139,5 +139,30 @@
 
   .course-name {
     position: relative !important;
+  }
+
+  .course-container {
+    position: relative;
+    left: -20px;
+  }
+
+  /* single course page */
+  .course-brochure {
+    width: 100% !important;
+  }
+
+  .course-brochure {
+    display: flex !important;
+    flex-direction: column !important;
+    background-color: green !important;
+    width: 100% !important;
+    margin-bottom: 200px;
+  }
+  .what-you-will-learn {
+    margin-left: 0;
+  }
+
+  #single-course-img {
+    width: 100% !important;
   }
 }

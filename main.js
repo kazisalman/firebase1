@@ -26,7 +26,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
-mongoose.connect("mongodb+srv://salman:Mongodb@7866@cluster0.geezf.mongodb.net/insights4allDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(localConnect, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set("useCreateIndex", true)
 
 const courseSchema = new mongoose.Schema({
