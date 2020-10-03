@@ -41,53 +41,32 @@
     </nav>
 
 
-    <div class="allcourse-container">
+    <div class="allproduct-container">
         <%  courses.forEach(function(course){ %>
 
-        <a class="course-link" href="/abc/<%=course._id%>">
+        <a class="product-link" href="/abc/<%=course._id%>">
 
-            <div class="course-container  ">
+            <div class="product-container  ">
 
-                <img class="course-img" src=<%=course.image_add%> />
+                <img class="product-img" src=<%=course.image_add%> />
                 <br></br>
-                <div class="course-name-container">
-                    <h5 style="font-family: 'Kanit', sans-serif; font-size: 20px;color:#05386B;" class="course-name">
-                        <%=course.course_name%> </h5>
-                </div>
 
-                <div class="tutor-price-container">
-                    <div style="font-family: 'Kanit', sans-serif; " class="course-tutor">
-                        <%=course.tutor%></div>
-                    <div style="font-family: 'Kanit', sans-serif;" class="course-price"><%=course.price%></div>
-                </div>
+                <h5>
+                    <%=course.course_name%> </h5>
+
+                <p style="font-family: 'Kanit', sans-serif; " class="product-tutor">
+                    <%=course.tutor%></p>
+                <p style="font-family: 'Kanit', sans-serif;" class="product-price"><%=course.price%></p>
+
             </div>
 
         </a>
-
-
-
-
         <% }) %>
 
     </div>
 
-
-
-
-
-
-
     <br>
     <a href="/allcourses" class="btn btn-primary">All Courses</a>
-
-
-
-
-
-
-
-
-
 
     <div class="about-us">
         <p class="about-us-testimonial">Insights4all is a platform that help young minds and struggling Students to

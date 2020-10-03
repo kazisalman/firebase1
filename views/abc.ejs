@@ -12,58 +12,59 @@
 
 </head>
 
-<body>
+<body class="abc-body">
 
 
-    <%- include("partials/nav"); -%>
 
 
-    <div class="course-brochure ">
-        <span id="image-container" class="image-container">
-            <img class="single-course-img" src=<%=image_add%> alt="">
+    <div class="checkout">
+        <div style="" class="product-brochure">
 
-        </span>
+            <img class="single-product-img" src=<%=image_add%> alt="">
 
 
-        <div id="course-heading" class="course-heading">
-            <a type="button" id="enroll-now-btn" class="btn btn-lg "
-                style="background-color: #05386b;color: white; ">Enroll
-                Now</a>
-            <h1 style="font-family: 'Lora', serif;"><%=course_name%></h1>
-            <h4 style="font-family: 'Lora', serif;"> <%=course_desc%></h4>
-            <p><%= tutor %></p>
-            <h3 style="font-family: 'Lora', serif;"> <%=price%> /-</h3>
+
+
+            <div id="product-heading" class="product-details">
+
+                <h2><%=course_name%></h2>
+                <h4> <%=course_desc%></h4>
+                <p> <%= tutor %></p>
+                <h3> <%=price%> /-</h3>
+                <a type="button" class="btn btn-lg " id="enroll-product"
+                    style="background-color: #05386b;color: white; ">Enroll
+                    Now</a>
+            </div>
+        </div>
+
+
+        <div>
+            <h2>What You Will Learn</h2>
+            <ul>
+                <li><%=desc_1%></li>
+                <li><%=desc_2 %></li>
+                <li><%=desc_3 %></li>
+                <li><%=desc_4 %></li>
+            </ul>
+
+        </div>
+
+        <div>
+            <h2>Course Description</h2>
+            <ul>
+                <li><%=syll_1%></li>
+                <li><%=syll_2 %></li>
+                <li><%=syll_3 %></li>
+                <li><%=syll_4%></li>
+                <li><%=syll_5%></li>
+                <li><%=syll_6 %></li>
+                <li><%=syll_7 %></li>
+                <li><%=syll_8 %></li>
+                <li><%=syll_9 %></li>
+
+            </ul>
         </div>
     </div>
-
-
-    <div style="font-family: 'Lora', serif;" class="what-you-will-learn">
-        <h2 style="text-align: center;">What You Will Learn</h2>
-        <ul>
-            <li><%=desc_1%></li>
-            <li><%=desc_2 %></li>
-            <li><%=desc_3 %></li>
-            <li><%=desc_4 %></li>
-        </ul>
-
-    </div>
-
-    <div style="font-family: 'Lora', serif;" class="course-description">
-        <h2>Course Description</h2>
-        <ul>
-            <li><%=syll_1%></li>
-            <li><%=syll_2 %></li>
-            <li><%=syll_3 %></li>
-            <li><%=syll_4%></li>
-            <li><%=syll_5%></li>
-            <li><%=syll_6 %></li>
-            <li><%=syll_7 %></li>
-            <li><%=syll_8 %></li>
-            <li><%=syll_9 %></li>
-
-        </ul>
-    </div>
-
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"

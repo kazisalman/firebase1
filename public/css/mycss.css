@@ -19,86 +19,14 @@
   left: 15%;
 }
 
-.allcourse-container {
-  margin: 0 70px;
-}
-
-.course-link:link {
-  color: #05386b;
-}
-
-.course-container {
-  height: 380px;
-  width: 285px;
-  border: 1px #dbd5d5;
-  margin: 10px;
-  padding: 10px;
-  display: inline-block;
-}
-
-.course-price {
-  font-weight: 700;
-}
-
-.course-img {
-  width: 250px;
-  height: 150px;
-  border-radius: 5px;
-}
-
-.course-name {
-  color: black;
-  font-family: "Kanit", sans-serif;
-  line-height: 28px;
-  font-family: "Kanit", sans-serif;
-  position: absolute;
-  /* <--- change made */
-}
-
-.course-name-container {
-  width: 250px;
-  height: 50px;
-}
-
 .about-us {
   background-color: #05368b;
-}
-
-.course-tutor {
-  font-family: "Kanit", sans-serif;
-  margin-top: 10px;
 }
 
 .about-us-testimonial {
   color: #fff;
   display: flex;
   justify-content: left;
-}
-
-#single-course-img {
-  height: 339.672px;
-  width: 525px;
-  margin: 0 0 15px 0;
-  max-width: 100%;
-}
-
-.course-brochure {
-  width: 100%;
-  height: 498px;
-  background-color: #f5f4f0;
-}
-
-.single-course-img {
-  height: 320px;
-  width: 500px;
-  float: right;
-  border-radius: 40px;
-  margin: 3rem 7rem 1rem 0;
-}
-
-#course-heading {
-  padding: 100px 0 0 170px;
-  color: #05386b;
 }
 
 .what-you-will-learn {
@@ -113,56 +41,96 @@
   line-height: 2.5rem;
 }
 
-.course-description {
-  background-color: #f5f4f0;
-  padding: 20px;
-  border-radius: 20px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  height: 475px;
-  width: 60%;
-  margin-left: 7rem;
-  line-height: 2.5rem;
-}
-
 #enroll-now-btn {
   position: relative;
   top: 300px;
   width: 30%;
 }
-@media only screen and (max-width: 600px) {
-  .course-name-container {
-    position: relative !important;
 
-    display: inline-block;
+.allproduct-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.product-img {
+  height: 200px;
+  width: 300px;
+}
+
+.product-container {
+  margin: 20px;
+}
+
+/* MEDIA QUERY STARTS */
+
+@media only screen and (max-device-width: 480px) {
+  .allproduct-container {
+    display: flex;
+    flex-direction: column;
   }
 
-  .course-name {
-    position: relative !important;
-  }
-
-  .course-container {
-    position: relative;
-    left: -20px;
-  }
-
-  /* single course page */
-  .course-brochure {
-    width: 100% !important;
-  }
-
-  .course-brochure {
+  .checkout {
     display: flex !important;
     flex-direction: column !important;
-    background-color: green !important;
+    background-color: violet;
+    justify-content: center !important;
+    align-items: center !important;
     width: 100% !important;
-    margin-bottom: 200px;
-  }
-  .what-you-will-learn {
-    margin-left: 0;
   }
 
-  #single-course-img {
+  .product-brochure {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center !important;
+    margin-bottom: 500px;
+    height: 700px !important;
+
     width: 100% !important;
   }
+
+  #enroll-product {
+    margin-top: 20px !important;
+    width: 200px;
+  }
+
+  .single-product-img {
+    padding: 40px 40px 40px 40px !important;
+    object-fit: contain !important;
+  }
+
+  .checkout > .product-brochure > .product-details {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center !important; */
+    /* justify-content: center !important; */
+    background-color: RED !important;
+    text-align: center;
+  }
+}
+
+/* MEDIA QUERY ENDS */
+
+.product-brochure {
+  display: flex;
+  height: 400px;
+  flex-direction: row-reverse;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.single-product-img {
+  height: 300px;
+  width: 500px;
+}
+
+.product-details {
+  margin-right: 300px;
+  margin-left: 50px;
+}
+
+#enroll-product {
+  margin-top: 80px;
+  width: 200px;
 }
