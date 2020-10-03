@@ -26,7 +26,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
-mongoose.connect(localConnect, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongodbAtlasURL, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set("useCreateIndex", true)
 
 const courseSchema = new mongoose.Schema({
