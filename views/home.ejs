@@ -9,31 +9,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+    <!-- --font awesome-- -->
+
+    <script src="https://kit.fontawesome.com/45f201f126.js" crossorigin="anonymous"></script>
+
+
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 </head>
 
-<body class="main-home  ">
+<body>
 
-    <nav class="main-nav">
+    <!-- -----------NAV STARTS------------------- -->
+
+    <nav class="main-nav" id="main-nav">
         <img class="nav-logo" src="/images/in11.png" />
-        <div>
+        <div id="myLinks">
             <a class="main-nav-tab">Home</a>
             <a class="main-nav-tab">All Courses</a>
             <a class="main-nav-tab">Contact Us</a>
             <a class="main-nav-tab">About</a>
-
         </div>
-
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
 
-    <div class="allproduct-container">
+    <!-- -----------NAV ENDS------------------- -->
+
+
+    <!-- ----------------COURSE-BODY STARTS--------------------->
+    <div class="home-allcourses-container">
         <%  courses.forEach(function(course){ %>
 
-        <a class="product-link" href="/abc/<%=course._id%>">
+        <a class="course-link" href="/abc/<%=course._id%>">
 
-            <div class="product-container  ">
+            <div class="home-course-container  ">
 
                 <img class="product-img" src=<%=course.image_add%> />
                 <br></br>
@@ -41,9 +53,9 @@
                 <h5>
                     <%=course.course_name%> </h5>
 
-                <p style="font-family: 'Kanit', sans-serif; " class="product-tutor">
+                <p class="home-course-tutor">
                     <%=course.tutor%></p>
-                <p style="font-family: 'Kanit', sans-serif;" class="product-price"><%=course.price%></p>
+                <p class="home-course-price"><%=course.price%></p>
 
             </div>
 
@@ -53,14 +65,110 @@
     </div>
 
     <br>
-    <a href="/allcourses" class="btn btn-primary">All Courses</a>
-
-    <div class="about-us">
-        <p class="about-us-testimonial">Insights4all is a platform that help young minds and struggling Students to
-            choose thier Career path by listening to thier role models and professionals of specific domain . We help
-            institutes to join with domain experts for Bright Future of thier Student. Students can have one on one
-            online sessions with domain specialist.</p>
+    <div style="text-align: center;"> <a href="/allcourses" class="btn btn-primary" id="all-courses-btn">All Courses</a>
     </div>
+    <!-- ----------------COURSE-BODY ENDS--------------------->
+
+    <!-- -----------------------FFFFFFOOTERRRRRRRR--------------------------- -->
+
+    <div id="c">
+        <div class="site-section">
+            <h1 style="text-align: center;color: #ffffff;">Services We Offer</h1>
+            <br>
+            <br>
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-3 mr-auto order-md-1">
+                        <h2 style="color: #ffe400;">Experts for your Institution</h2>
+                        <p class="service-we-offer">Get Connected to Best Professional Expert or Trainer of any Domain
+                            for your College Students
+                            or any
+                            Institution.</p>
+
+                    </div>
+                    <div class="col-md-3 mr-auto order-md-1">
+                        <h2 style="color: #ffe400;">Online Expert Advice</h2>
+                        <p class="service-we-offer">Get Career Guidance by skilled and experienced professionals at your
+                            convenience. </p>
+
+                    </div>
+                    <div class="col-md-3 mr-auto order-md-1">
+                        <h2 style="color: #ffe400;">Expert Webinars</h2>
+                        <br>
+                        <p class="service-we-offer">Attend Webinar of Domain Specialist from your home and choose your
+                            career wisely.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------- LOWER FOOTER--------------------------- -->
+
+    <div id="footer">
+        <div class="site-footer" style="background-color: #05386b">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-4">
+                        <h3 class="footer-heading mb-4" style="color : #ffe400;">About Us</h3>
+                        <p style="color: white;">Insights4all is a platform that help young minds and struggling
+                            Students to choose
+                            thier Career path
+                            by listening to thier role models and professionals of specific domain . We help institutes
+                            to join with
+                            domain experts for Bright Future of thier Student. Students can have one on one online
+                            sessions with
+                            domain specialist.</p>
+                    </div>
+                    <div class="col-md-3 ml-auto">
+                        <!-- <h3 class="footer-heading mb-4">Navigation</h3> -->
+                        <ul class="list-unstyled float-left mr-5">
+                            <li><a href="{{ url_for('about') }}">About Us</a></li>
+                            <li><a href="{{ url_for('soon') }}">Interviews</a></li>
+                            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+
+                        </ul>
+                        <ul class="list-unstyled float-left">
+                            <li><a href="{{ url_for('allpost',tag = 1  ) }}">IT</a></li>
+                            <li><a href="{{ url_for('soon') }}">Medical</a></li>
+                            <li><a href="{{ url_for('soon') }}">Business</a></li>
+                            <li><a href="{{ url_for('soon') }}">Fashion</a></li>
+                            <li><a href="{{ url_for('soon') }}">Arts</a></li>
+                            <li><a href="{{ url_for('soon') }}">Spokesperson</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+
+
+                        <div>
+                            <h3 class="footer-heading mb-4" style="color: white;">Connect With Us</h3>
+                            <p>
+                                <a href="https://www.facebook.com/Insights4all-110315934092761"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/insights4all_/"><i class="fab fa-instagram"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("main-nav");
+            if (x.className === "main-nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "main-nav";
+            }
+        }
+    </script>
+    <!-- --------------BOOTSTRAP CDN------------- -->
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
