@@ -15,40 +15,44 @@
 
 
 
-<body class="container-fluid">
+<body>
 
-    <div class="heading-container">
-        <h1>All Courses</h1>
-    </div>
+    <nav class="main-nav">
+        <img class="nav-logo" src="/images/in11.png" />
+        <div>
+            <a class="main-nav-tab">Home</a>
+            <a class="main-nav-tab">All Courses</a>
+            <a class="main-nav-tab">Contact Us</a>
+            <a class="main-nav-tab">About</a>
+
+        </div>
+
+    </nav>
 
 
-    <div class="allcourse-container ">
+
+
+    <div class="allproduct-container-allcourses">
+
         <%  courses.forEach(function(course){ %>
 
-        <a class="course-link" href="/abc/<%=course._id%>">
-            <!-- <----chnages -->
+        <a class="product-link" href="#">
 
-            <div class="course-container col-8 col-md-4">
+            <div class="product-container-allcourses">
 
-                <img class="course-img" src=<%=course.image_add%> />
+                <img class="product-img" src=<%=course.image_add%> />
                 <br></br>
-                <div class="course-name-container">
-                    <h5 style="font-family: 'Kanit', sans-serif; font-size: 20px;color:#05386B;" class="course-name">
-                        <%=course.course_name%> </h5>
-                </div>
 
-                <div class="tutor-price-container">
-                    <div style="font-family: 'Kanit', sans-serif; " class="course-tutor">
-                        <%=course.tutor%></div>
-                    <div style="font-family: 'Kanit', sans-serif;" class="course-price"><%=course.price%></div>
-                </div>
+                <h5>
+                    <%=course.course_name%> </h5>
+
+                <p class="product-tutor">
+                    <%=course.tutor%></p>
+                <p class="product-price"><%=course.price%></p>
+
             </div>
 
         </a>
-
-
-
-
         <% }) %>
 
     </div>
