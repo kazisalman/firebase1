@@ -134,24 +134,7 @@ app.get("/abc/:courseID", function (req, res) {
             console.log(err)
         } else {
             res.render("abc", {
-                image_add: course.image_add,
-                course_name: course.course_name,
-                course_desc: course.course_desc,
-                tutor: course.tutor,
-                price: course.price,
-                desc_1: course.desc_1,
-                desc_2: course.desc_2,
-                desc_3: course.desc_3,
-                desc_4: course.desc_4,
-                syll_1: course.syll_1,
-                syll_2: course.syll_2,
-                syll_3: course.syll_3,
-                syll_4: course.syll_4,
-                syll_5: course.syll_5,
-                syll_6: course.syll_6,
-                syll_7: course.syll_7,
-                syll_8: course.syll_8,
-                syll_9: course.syll_9,
+                course
 
             })
         }
@@ -174,25 +157,7 @@ app.get("/editcourse/:courseID", (req, res) => {
             console.log(err)
         } else {
             res.render("editcourse", {
-                _id: course._id,
-                image_add: course.image_add,
-                course_name: course.course_name,
-                course_desc: req.body.course_desc,
-                tutor: course.tutor,
-                price: course.price,
-                desc_1: course.desc_1,
-                desc_2: course.desc_2,
-                desc_3: course.desc_3,
-                desc_4: course.desc_4,
-                syll_1: course.syll_1,
-                syll_2: course.syll_2,
-                syll_3: course.syll_3,
-                syll_4: course.syll_4,
-                syll_5: course.syll_5,
-                syll_6: course.syll_6,
-                syll_7: course.syll_7,
-                syll_8: course.syll_8,
-                syll_9: course.syll_9,
+                course
 
             })
         }
@@ -342,40 +307,40 @@ app.post("/Adminregister", (req, res) => {
 
 app.get("/Adminhome", (req, res) => {
 
-    Course.find({}, function (err, course) {
-        if (err) {
-            console.log(err)
-        } else {
-            res.render("Adminhome", {
-                course,
-                image_add: course.image_add,
-                course_name: course.course_name,
-                course_desc: req.body.course_desc,
-                tutor: course.tutor,
-                price: course.price,
-                desc_1: course.desc_1,
-                desc_2: course.desc_2,
-                desc_3: course.desc_3,
-                desc_4: course.desc_4,
-                syll_1: course.syll_1,
-                syll_2: course.syll_2,
-                syll_3: course.syll_3,
-                syll_4: course.syll_4,
-                syll_5: course.syll_5,
-                syll_6: course.syll_6,
-                syll_7: course.syll_7,
-                syll_8: course.syll_8,
-                syll_9: course.syll_9,
 
-            })
-        }
-    })
-    // if (req.isAuthenticated()) {
+    if (req.isAuthenticated()) {
+        Course.find({}, function (err, course) {
+            if (err) {
+                console.log(err)
+            } else {
+                res.render("Adminhome", {
+                    course,
+                    image_add: course.image_add,
+                    course_name: course.course_name,
+                    course_desc: req.body.course_desc,
+                    tutor: course.tutor,
+                    price: course.price,
+                    desc_1: course.desc_1,
+                    desc_2: course.desc_2,
+                    desc_3: course.desc_3,
+                    desc_4: course.desc_4,
+                    syll_1: course.syll_1,
+                    syll_2: course.syll_2,
+                    syll_3: course.syll_3,
+                    syll_4: course.syll_4,
+                    syll_5: course.syll_5,
+                    syll_6: course.syll_6,
+                    syll_7: course.syll_7,
+                    syll_8: course.syll_8,
+                    syll_9: course.syll_9,
 
-    //     // res.render("admin/Adminhome")
-    // } else {
-    //     res.redirect("adminlogin")
-    // }
+                })
+            }
+        })
+
+    } else {
+        res.redirect("adminlogin")
+    }
 })
 
 

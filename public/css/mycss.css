@@ -125,6 +125,8 @@
     padding: 0 20px !important;
   }
 
+ 
+
   .product-description {
     padding: 0 20px !important;
   }
@@ -205,39 +207,36 @@
   width: 200px;
 }
 
-/* old */
-/* .what-you-will-learn {
-  
-  padding: 20px;
-  
-  margin-top: 50px;
-  margin-bottom: 50px;
-  height: 375px;
-  width: 495px;
-  margin-left: 7rem;
-  line-height: 2.5rem;
-} */
+
 
 .what-you-will-learn {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 140px;
+  padding: 40px 140px;
   background-color: #f5f4f0;
   border-radius: 20px;
   line-height: 32px;
   margin-bottom: 20px;
 }
 
+.what-you-will-learn > ul > li {
+  list-style-type: none;
+}
+
 .product-description {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 140px;
+  padding: 40px 140px;
   margin-left: 0;
   background-color: #f5f4f0;
   border-radius: 20px;
   line-height: 32px;
+}
+
+.product-description > ul >li {
+  list-style-type: none;
 }
 
 .allproduct-container-allcourses {

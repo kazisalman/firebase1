@@ -35,17 +35,17 @@
     <div class="checkout">
         <div class="product-brochure">
 
-            <img class="single-product-img" id="single-product-img" src=<%=image_add%> alt="">
+            <img class="single-product-img" id="single-product-img" src=<%=course.image_add%> alt="">
 
 
 
 
             <div id="product-details" class="product-details">
 
-                <h2><%=course_name%></h2>
-                <h4> <%=course_desc%></h4>
-                <p> <%= tutor %></p>
-                <h3> <%=price%> /-</h3>
+                <h2><%=course.course_name%></h2>
+                <h4> <%=course.course_desc%></h4>
+                <p> <%= course.tutor %></p>
+                <h3> <%=course.price%> /-</h3>
                 <a type="button" class="btn btn-lg " id="enroll-product"
                     style="background-color: #05386b;color: white; ">Enroll
                     Now</a>
@@ -56,10 +56,10 @@
         <div class="what-you-will-learn">
             <h2>What You Will Learn</h2>
             <ul>
-                <li><%=desc_1%></li>
-                <li><%=desc_2 %></li>
-                <li><%=desc_3 %></li>
-                <li><%=desc_4 %></li>
+                <li><%=course.desc_1%></li>
+                <li><%=course.desc_2 %></li>
+                <li><%=course.desc_3 %></li>
+                <li><%=course.desc_4 %></li>
             </ul>
 
         </div>
@@ -67,15 +67,15 @@
         <div class="product-description">
             <h2>Course Description</h2>
             <ul>
-                <li><%=syll_1%></li>
-                <li><%=syll_2 %></li>
-                <li><%=syll_3 %></li>
-                <li><%=syll_4%></li>
-                <li><%=syll_5%></li>
-                <li><%=syll_6 %></li>
-                <li><%=syll_7 %></li>
-                <li><%=syll_8 %></li>
-                <li><%=syll_9 %></li>
+                <li><%=course.syll_1%></li>
+                <li><%=course.syll_2 %></li>
+                <li><%=course.syll_3 %></li>
+                <li><%=course.syll_4%></li>
+                <li><%=course.syll_5%></li>
+                <li><%=course.syll_6 %></li>
+                <li><%=course.syll_7 %></li>
+                <li><%=course.syll_8 %></li>
+                <li><%=course.syll_9 %></li>
 
             </ul>
         </div>
