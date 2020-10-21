@@ -44,6 +44,7 @@
 
 .home-course-container {
   margin: 20px;
+  text-align: left;
 }
 
 #all-courses-btn {
@@ -59,6 +60,10 @@
     flex-direction: column;
   }
 
+  .home-course-container {
+    margin: 20px;
+    text-align: center !important;
+  }
   .abc-body {
     display: flex !;
     flex-direction: column;
@@ -81,7 +86,8 @@
     justify-content: center !important;
     align-items: center !important;
     margin-bottom: 70px;
-    background-color: lightgoldenrodyellow;
+   
+   background-color: rgb(255, 254, 244);
 
     height: 700px !important;
     width: 100% !important;
@@ -98,7 +104,7 @@
   }
 
   #product-details {
-    border: 1px solid black;
+    border: 0.1px solid pink;
     display: flex;
     flex-direction: column;
     width: 380px !important;
@@ -111,6 +117,7 @@
   
     width: 100%;
     margin-left: 300px;
+    margin-right: 300px !important;
     text-align: center;
   }
 
@@ -130,6 +137,7 @@
     justify-content: center;
     margin-left: 10px !important;
     margin-right: 0 !important;
+   
   }
 
   .heading-container {
@@ -146,53 +154,7 @@
     padding: 20px 0 !important ;
   }
 
-  .main-nav {
-    width: 100% !important;
-    background-color: #fff !important;
-  }
-  
-  .main-nav > img {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  .main-nav-tab:not(:first-child) {
-    display: none;
-  }
-    .icon {
-      display: block !important;
-      float: right;
-    }
-
-    .main-nav.responsive {
-      position: relative;
-      border: 3px solid pink;
-      
-    }
-
-    .main-nav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    .main-nav.responsive #myLinks {
-     display: inline-block;
-      background-color: lawngreen;
-
-    }
-
-    .main-nav.responsive .main-nav-tab {
-      float: none;
-      display: inline-block;
-      text-align: left;
-
-      /* background-color: purple; */
-      color: red;
-    }
-
+ 
     #navbarNavAltMarkup {
       margin-left: 0 !important;
       text-align: center;
@@ -228,13 +190,14 @@
 .single-product-img {
   height: 300px;
   width: 500px;
+  border-radius: 10px ;
 }
 
 .product-details {
   height: 290px;
-  width: 665px;
-  margin-right: 300px;
-  background-color: lightgreen;
+  width: 750px !important;
+  margin-right: 220px;
+  border: 1px solid khaki;
 }
 
 #enroll-product {
@@ -280,7 +243,10 @@
 .allproduct-container-allcourses {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  
+  align-items: center;
+  margin-top: 10px !important;
+  
 
   margin: 0 80px;
 }
