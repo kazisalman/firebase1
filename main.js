@@ -344,11 +344,15 @@ app.get("/Adminhome", (req, res) => {
 })
 
 
-app.get("/contactus", (req, res) => {
-    res.render("contactus")
+app.get("/contact", (req, res) => {
+    res.render("contact")
 }
 )
 
+// app.get("/newcourse", (req, res) => {
+//     res.render("newCourse")
+// }
+// )
 
 
 app.listen(PORT, function () {
