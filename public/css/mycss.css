@@ -223,7 +223,7 @@
 }
 
 .what-you-will-learn > ul > li {
-  list-style-type: none;
+  list-style-type: decimal;
 }
 
 .product-description {
@@ -238,7 +238,7 @@
 }
 
 .product-description > ul >li {
-  list-style-type: none;
+  list-style-type: decimal;
 }
 
 .allproduct-container-allcourses {
