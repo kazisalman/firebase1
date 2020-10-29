@@ -344,6 +344,11 @@ app.get("/Adminhome", (req, res) => {
 })
 
 
+app.get("/contactus", (req, res) => {
+    res.render("contactus")
+}
+)
+
 
 
 app.listen(PORT, function () {

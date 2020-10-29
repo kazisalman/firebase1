@@ -24,11 +24,11 @@
   justify-content: left;
 }
 
-#enroll-now-btn {
-  position: relative;
+/* #enroll-now-btn {
+  
   top: 300px;
   width: 30%;
-}
+} */
 
 .home-allcourses-container {
   display: flex;
@@ -203,7 +203,8 @@
 }
 
 #enroll-product {
-  margin-top: 80px;
+  display: block !important;
+  margin-top: 18px;
   width: 200px;
 }
 
@@ -218,6 +219,7 @@
   border-radius: 20px;
   line-height: 32px;
   margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 .what-you-will-learn > ul > li {
@@ -341,4 +343,17 @@
 
 .icon {
   display: none;
+}
+
+#contact-us {
+  background-color: #150421 !important;
+  padding: 105px 0 105px 0;
+  text-align: center !important;
+  margin-bottom: 50px;
+}
+
+.post-entry > h1{
+  font-family: serif !important;
+  color: #f5f4f0;
+  font-size: 75px;
 }

@@ -59,35 +59,114 @@
     <!-- -----------NAV ENDS------------------- -->
 
 
-    <!-- ----------------COURSE-BODY STARTS--------------------->
-    <div class="home-allcourses-container">
-        <%  courses.forEach(function(course){ %>
-
-        <a class="course-link" href="/abc/<%=course._id%>">
-
-            <div class="home-course-container  ">
-
-                <img class="product-img" src=<%=course.image_add%> />
-                <br></br>
-
-                <h5>
-                    <%=course.course_name%> </h5>
-
-                <p class="home-course-tutor">
-                    <%=course.tutor%></p>
-                <p class="home-course-price"><%=course.price%></p>
-
+    <!-- ----------------CONTACT-BODY STARTS--------------------->
+    <div class="site-cover site-cover-sm same-height overlay single-page"
+        style="background-image: url('static/Website/images/purple.jpg');">
+        <div id="contact-us">
+            <div class="col-md-12 col-lg-10">
+                <div class="post-entry text-center">
+                    <h1>Contact Us</h1>
+                    <p class="lead mb-4 text-white">Want to Counsel or seek Advice ??</p>
+                </div>
             </div>
 
-        </a>
-        <% }) %>
-
+        </div>
     </div>
 
-    <br>
-    <div style="text-align: center;"> <a href="/allcourses" class="btn btn-primary" id="all-courses-btn">All Courses</a>
+
+    <div class="site-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mb-5">
+
+
+
+                    <form class="p-5 bg-white" method="POST" action="{{ url_for('contact') }}">
+
+                        <div class="row form-group">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label class="text-black" for="fname">Full Name</label>
+                                <input type="text" id="fname" class="form-control" name="name">
+                            </div>
+
+                        </div>
+
+                        <div class="row form-group">
+
+                            <div class="col-md-12">
+                                <label class="text-black" for="email">Email</label>
+                                <input type="email" id="email" class="form-control" name="email">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label class="text-black" for="fname">contact</label>
+                                <input type="text" id="fname" class="form-control" name="contact">
+                            </div>
+
+                        </div>
+
+                        <div class="row form-group">
+
+                            <div class="col-md-12">
+                                <label class="text-black" for="subject">Subject</label>
+                                <input type="subject" id="subject" class="form-control" name="subject">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="text-black" for="message">Message</label>
+                                <textarea name="message" id="message" cols="30" rows="7" class="form-control"
+                                    placeholder="Write your notes or questions here..." name="message"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
+                            </div>
+                        </div>
+                        <div class="alert alert-success">
+                            {{msg}}
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="col-md-5">
+
+                    <div class="p-4 mb-3 bg-white">
+                        <p class="mb-0 font-weight-bold">Linkedin</p>
+                        <p class="mb-4"><a
+                                href="https://www.linkedin.com/company/insights-4-all/">https://www.linkedin.com/company/insights-4-all/</a>
+                        </p>
+
+
+                        <p class="mb-0 font-weight-bold">Facebook</p>
+                        <p class="mb-4"><a
+                                href="https://www.facebook.com/Insights4all-110315934092761">https://www.facebook.com/Insights4all-110315934092761</a>
+                        </p>
+
+                        <p class="mb-0 font-weight-bold">Instagram</p>
+                        <p class="mb-4"><a
+                                href="https://www.instagram.com/insights4all_/">https://www.instagram.com/insights4all_/</a>
+                        </p>
+
+                        <p class="mb-0 font-weight-bold">Phone</p>
+                        <p class="mb-4"><a href="">8291165361</a></p>
+
+                        <p class="mb-0 font-weight-bold">Email Address</p>
+                        <p class="mb-0"><a href="#">grow.with.insights4all@gmail.com</a></p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- ----------------COURSE-BODY ENDS--------------------->
+    <!-- ----------------CONTACT-BODY ENDS--------------------->
 
     <!-- -----------------------FFFFFFOOTERRRRRRRR--------------------------- -->
 
