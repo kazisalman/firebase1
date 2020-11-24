@@ -244,9 +244,9 @@
 .allproduct-container-allcourses {
   display: flex;
   flex-wrap: wrap;
-  
   align-items: center;
   margin-top: 10px !important;
+  justify-content: center;
   
 
   margin: 0 80px;
