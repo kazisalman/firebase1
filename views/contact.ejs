@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Insights4all Live Coding Classes</title>
     <link rel="stylesheet" href="/css/mycss.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -23,55 +23,29 @@
 <body>
 
     <!-- -----------NAV STARTS------------------- -->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img class="nav-logo" src="/images/in11.png" />
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="allcourses">All Courses</a>
-                <a class="nav-link" href="#">Contact Us</a>
-                <a class="nav-link " href="#">About</a>
-            </div>
-        </div>
-    </nav>
-
-
-
-
-    <!-- <nav class="main-nav" id="main-nav">
-        <img class="nav-logo" src="/images/in11.png" />
-        <div id="myLinks">
-            <a class="main-nav-tab">Home</a>
-            <a class="main-nav-tab">All Courses</a>
-            <a class="main-nav-tab">Contact Us</a>
-            <a class="main-nav-tab">About</a>
-        </div>
+    <div class="topnav" id="myTopnav">
+        <img  src="/images/logo1.png" id="logo"/>
+        <a class="mr-3 bg-black" href="/contact" >Contact Us</a>
+        <a class=" mr-3" href="/about">About Us</a>
+        <a class="mr-3"href="allcourses">Courses</a>
+        <a class="mr-3" href="/">Home</a>
+        
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+          <i class="fa fa-bars"></i>
         </a>
-    </nav> -->
-
-    <!-- -----------NAV ENDS------------------- -->
-
-
-    <!-- ----------------CONTACT-BODY STARTS--------------------->
-    <div class="site-cover site-cover-sm same-height overlay single-page"
-        style="background-image: url('static/Website/images/purple.jpg');">
-        <div id="contact-us">
-            <div class="col-md-12 col-lg-10">
-                <div class="post-entry text-center">
-                    <h1>Contact Us</h1>
-                    <p class="lead mb-4 text-white">Want to Counsel or seek Advice ??</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
+      </div>
+      <h3 class="text-center mt-4 coursetitle">Contact Us </h3>
+  <hr style="height:2px;border-width:2px;background-color:#053680;width:200px;">
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }</script>
+  
 
 
     <div class="site-section bg-light">
@@ -81,7 +55,7 @@
 
 
 
-                    <form class="p-5 bg-white" method="POST" action="{{ url_for('contact') }}">
+                    <form class="p-5 bg-white" method="POST" action="/contact">
 
                         <div class="row form-group">
                             <div class="col-md-6 mb-3 mb-md-0">
@@ -102,7 +76,7 @@
                         <div class="row form-group">
                             <div class="col-md-6 mb-3 mb-md-0">
                                 <label class="text-black" for="fname">contact</label>
-                                <input type="text" id="fname" class="form-control" name="contact">
+                                <input type="number" id="fname" class="form-control" name="contact">
                             </div>
 
                         </div>
@@ -111,7 +85,7 @@
 
                             <div class="col-md-12">
                                 <label class="text-black" for="subject">Subject</label>
-                                <input type="subject" id="subject" class="form-control" name="subject">
+                                <input type="text" id="subject" class="form-control" name="subject">
                             </div>
                         </div>
 
@@ -154,7 +128,7 @@
                         </p>
 
                         <p class="mb-0 font-weight-bold">Phone</p>
-                        <p class="mb-4"><a href="">8291165361</a></p>
+                        <p class="mb-4"><a href="">+91 8291165361</a></p>
 
                         <p class="mb-0 font-weight-bold">Email Address</p>
                         <p class="mb-0"><a href="#">grow.with.insights4all@gmail.com</a></p>
@@ -168,79 +142,40 @@
     <!-- ----------------CONTACT-BODY ENDS--------------------->
 
     <!-- -----------------------FFFFFFOOTERRRRRRRR--------------------------- -->
-
-    <div id="c">
-        <div class="site-section">
-            <h1 style="text-align: center;color: #ffffff;">Services We Offer</h1>
-            <br>
-            <br>
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-md-3 mr-auto order-md-1">
-                        <h2 style="color: #ffe400;">Experts for your Institution</h2>
-                        <p class="service-we-offer">Get Connected to Best Professional Expert or Trainer of any Domain
-                            for your College Students
-                            or any
-                            Institution.</p>
-
-                    </div>
-                    <div class="col-md-3 mr-auto order-md-1">
-                        <h2 style="color: #ffe400;">Online Expert Advice</h2>
-                        <p class="service-we-offer">Get Career Guidance by skilled and experienced professionals at your
-                            convenience. </p>
-
-                    </div>
-                    <div class="col-md-3 mr-auto order-md-1">
-                        <h2 style="color: #ffe400;">Expert Webinars</h2>
-                        <br>
-                        <p class="service-we-offer">Attend Webinar of Domain Specialist from your home and choose your
-                            career wisely.</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- ----------------------- LOWER FOOTER--------------------------- -->
-
     <div id="footer">
-        <div class="site-footer" style="background-color: #05386b">
+        <div class="site-footer mt-5" style="background-color: #053680">
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-md-4">
                         <h3 class="footer-heading mb-4" style="color : #ffe400;">About Us</h3>
-                        <p style="color: white;">Insights4all is a platform that help young minds and struggling
-                            Students to choose
-                            thier Career path
-                            by listening to thier role models and professionals of specific domain . We help institutes
-                            to join with
-                            domain experts for Bright Future of thier Student. Students can have one on one online
-                            sessions with
-                            domain specialist.</p>
+                        <p style="color: white;">Insights4all is an online learning platform that gives opportunity to be mentored by highly certified 
+                            and experienced professionals keeping beginners and intermediates in mind.
+                            For the most sought domain and skills by the industry.
+                            <ol style="color:aliceblue;">
+                                <li>Live Interactive Session with our experts for training and guidance.</li>
+                                <li>Lifetime Access of Study materials.</li>
+                                <li>Gaining access to exclusive course content and self paced videos as part of course curriculum.</li>
+                                <li>Oppurtunity to work on 1 Major project under the supervision of Professional Trainers.</li>
+                                <li>Course Completion Certificate.</li>
+      
+                            </ol>
+                             
+                            </p>
                     </div>
                     <div class="col-md-3 ml-auto">
                         <!-- <h3 class="footer-heading mb-4">Navigation</h3> -->
-                        <ul class="list-unstyled float-left mr-5">
-                            <li><a href="{{ url_for('about') }}">About Us</a></li>
-                            <li><a href="{{ url_for('soon') }}">Interviews</a></li>
-                            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
-
-                        </ul>
+                        
                         <ul class="list-unstyled float-left">
-                            <li><a href="{{ url_for('allpost',tag = 1  ) }}">IT</a></li>
-                            <li><a href="{{ url_for('soon') }}">Medical</a></li>
-                            <li><a href="{{ url_for('soon') }}">Business</a></li>
-                            <li><a href="{{ url_for('soon') }}">Fashion</a></li>
-                            <li><a href="{{ url_for('soon') }}">Arts</a></li>
-                            <li><a href="{{ url_for('soon') }}">Spokesperson</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li class="mt-3"><a href="allcourses">Courses</a></li>
+                            <li class="mt-3"><a href="/contact">Contact Us</a></li>
+                            <li class="mt-3"><a href="/about">About Us</a></li>
                         </ul>
-                    </div>
+                     </div>
                     <div class="col-md-4">
-
-
+      
+      
                         <div>
                             <h3 class="footer-heading mb-4" style="color: white;">Connect With Us</h3>
                             <p>
@@ -248,25 +183,16 @@
                                         class="fab fa-facebook"></i></a>
                                 <a href="https://www.instagram.com/insights4all_/"><i class="fab fa-instagram"></i>
                                 </a>
+                                <p style="color: #ffe400;">Contact - +91 8291165361</p>
+                                <p style="color: #ffe400;">Gmail - grow.with.insights4all@gmail.com</p>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("main-nav");
-            if (x.className === "main-nav") {
-                x.className += " responsive";
-            } else {
-                x.className = "main-nav";
-            }
-        }
-    </script>
-    <!-- --------------BOOTSTRAP CDN------------- -->
+      </div>
+          <!-- --------------BOOTSTRAP CDN------------- -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

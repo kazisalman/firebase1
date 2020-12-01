@@ -48,7 +48,7 @@ const courseSchema = new mongoose.Schema({
     syll_9: String,
 
     price: Number,
-    tutor: String,
+    originalprice_1: Number,
 
 });
 
@@ -57,11 +57,19 @@ const userSchema = new mongoose.Schema({
     password: String
 })
 
+const contactSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    contact:Number,
+    subject:String,
+    message:String
+})
+
 userSchema.plugin(passportLocalMongoose)
 
 const Course = mongoose.model("Course", courseSchema);
 const User = mongoose.model("User", userSchema);
-
+const Contact = mongoose.model("Contact", contactSchema);
 passport.use(User.createStrategy())
 
 passport.serializeUser(User.serializeUser())
@@ -92,14 +100,14 @@ app.get("/allcourses", (req, res) => {
 
 })
 
-
 app.post("/newCourse", function (req, res) {
+    
     const course = new Course({
         image_add: req.body.image_add,
         course_name: req.body.course_name,
         course_desc: req.body.course_desc,
+        originalprice_1: req.body.originalprice_1,
         price: req.body.price,
-        tutor: req.body.tutor,
         desc_1: req.body.desc_1,
         desc_2: req.body.desc_2,
         desc_3: req.body.desc_3,
@@ -172,8 +180,8 @@ app.post("/editcourse", (req, res) => {
         image_add: req.body.image_add,
         course_name: req.body.course_name,
         course_desc: req.body.course_desc,
+        originalprice_1: req.body.originalprice_1,
         price: req.body.price,
-        tutor: req.body.tutor,
         desc_1: req.body.desc_1,
         desc_2: req.body.desc_2,
         desc_3: req.body.desc_3,
@@ -228,7 +236,7 @@ app.get("/Adminlogin", (req, res) => {
                 image_add: course.image_add,
                 course_name: course.course_name,
                 course_desc: req.body.course_desc,
-                tutor: course.tutor,
+                originalprice_1: course.originalprice_1,
                 price: course.price,
                 desc_1: course.desc_1,
                 desc_2: course.desc_2,
@@ -318,7 +326,7 @@ app.get("/Adminhome", (req, res) => {
                     image_add: course.image_add,
                     course_name: course.course_name,
                     course_desc: req.body.course_desc,
-                    tutor: course.tutor,
+                    originalprice_1: course.originalprice_1,
                     price: course.price,
                     desc_1: course.desc_1,
                     desc_2: course.desc_2,
@@ -346,6 +354,30 @@ app.get("/Adminhome", (req, res) => {
 
 app.get("/contact", (req, res) => {
     res.render("contact")
+}
+)
+
+app.post("/contact", function (req, res) {
+    
+    const contact = new Contact({
+        name: req.body.name,
+        email: req.body.email,
+        contact: req.body.contact,
+        subject: req.body.subject,
+        message: req.body.message
+        
+    });
+
+    contact.save(function (err) {
+        if (!err) {
+            res.redirect("/");
+        }
+    });
+
+});
+
+app.get("/about", (req, res) => {
+    res.render("about")
 }
 )
 
