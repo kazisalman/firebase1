@@ -1,60 +1,51 @@
-#logo{
+#logo {
   object-fit: contain;
-  height:70px;
-  width:250px;
+  height: 70px;
+  width: 250px;
 }
 
-#title
-{
-  background-color: #05368B;
-
+#title {
+  background-color: #05368b;
 }
-#title h3{
+#title h3 {
   color: white;
-  margin-top:30px;
+  margin-top: 30px;
 }
 
-#title h6
-{
+#title h6 {
   color: white;
 }
 .see {
-  background-color: #05368B;
+  background-color: #05368b;
 }
 
-.coursetitle{
-  color: #05368B;
+.coursetitle {
+  color: #05368b;
 }
 
-.clockicon{
-  color: #05368B;
+.clockicon {
+  color: #05368b;
 }
 
-#syllabus h2{
-  color: #05368B;
+#syllabus h2 {
+  color: #05368b;
 }
 
-
-
-#content h5{
-  color: #05368B;
+#content h5 {
+  color: #05368b;
 }
 #slider h1 {
-  color:white;
-  
-  
+  color: black;
 }
 #slider p {
-  color:white;
-  
-  
+  color: white;
 }
-#slider{
-  background-color: #05368B;
+#slider {
+  background-color: #05368b;
 }
 
 .topnav {
-background-color:#05368B;
+  background-color: #05368b;
   overflow: hidden;
 }
 
@@ -62,8 +53,8 @@ background-color:#05368B;
 .topnav a {
   float: right;
   display: block;
-  color: white;;
-  
+  color: white;
+
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -87,32 +78,33 @@ background-color:#05368B;
   display: none;
 }
 
-
-
-
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
   }
-  .courseimg{
-    height:150px;
-    width:250px;
+  .courseimg {
+    height: 150px;
+    width: 250px;
   }
-  .name h3{
+  .name h3 {
     margin-top: 1px;
   }
-  #logo{
+  #logo {
     margin-top: 10px;
     margin-bottom: 5px;
     object-fit: contain;
-    height:50px;
-    width:200px;
+    height: 50px;
+    width: 200px;
   }
 }
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -125,22 +117,17 @@ background-color:#05368B;
   }
 }
 
-
 .banner {
   display: flex;
   justify-content: center;
 }
 
 .heading-container {
-  color: #05368B;
+  color: #05368b;
   background-color: #f5f4f0;
   text-align: center;
   padding: 40px 0;
-
-
 }
-
-
 
 .about-us {
   background-color: #05368b;
@@ -176,11 +163,10 @@ background-color:#05368B;
 }
 
 #all-courses-btn {
-  margin: 0 0 40px 0  ;
+  margin: 0 0 40px 0;
 }
 
 /* ----------------------------------MEDIA QUERY STARTS------------------------------------------------- */
-
 
 @media only screen and (max-device-width: 480px) {
   .home-allcourses-container {
@@ -214,8 +200,8 @@ background-color:#05368B;
     justify-content: center !important;
     align-items: center !important;
     margin-bottom: 70px;
-   
-   background-color: rgb(255, 254, 244);
+
+    background-color: rgb(255, 254, 244);
 
     height: 700px !important;
     width: 100% !important;
@@ -232,7 +218,6 @@ background-color:#05368B;
   }
 
   #product-details {
-   
     display: flex;
     flex-direction: column;
     width: 380px !important;
@@ -241,8 +226,7 @@ background-color:#05368B;
     align-items: center;
   }
 
-  .product-brochure>.product-details {
-  
+  .product-brochure > .product-details {
     width: 100%;
     margin-left: 300px;
     margin-right: 300px !important;
@@ -251,14 +235,11 @@ background-color:#05368B;
 
   .what-you-will-learn {
     padding: 0 20px !important;
-
   }
 
- 
   .product-description {
     padding: 0 20px !important;
   }
-
 
   /* //all courses page media query */
   .allproduct-container-allcourses {
@@ -267,7 +248,6 @@ background-color:#05368B;
     justify-content: center;
     margin-left: 10px !important;
     margin-right: 0 !important;
-   
   }
 
   .heading-container {
@@ -284,25 +264,22 @@ background-color:#05368B;
     padding: 20px 0 !important ;
   }
 
- 
-    #navbarNavAltMarkup {
-      margin-left: 0 !important;
-      text-align: center;
-    }
+  #navbarNavAltMarkup {
+    margin-left: 0 !important;
+    text-align: center;
+  }
 
-    .navbar-nav {
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: space-between !important;
-      padding: 0 5px !important;
-      align-items: center;
-      border: 1px solid black;
-    }
-    
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 0 5px !important;
+    align-items: center;
+    border: 1px solid black;
+  }
 
-    
   .nav-link {
-  display: block !important;
+    display: block !important;
   }
 }
 
@@ -320,14 +297,13 @@ background-color:#05368B;
 .single-product-img {
   height: 300px;
   width: 500px;
-  border-radius: 10px ;
+  border-radius: 10px;
 }
 
 .product-details {
   height: 290px;
   width: 750px !important;
   margin-right: 220px;
-  
 }
 
 #enroll-product {
@@ -335,8 +311,6 @@ background-color:#05368B;
   margin-top: 18px;
   width: 200px;
 }
-
-
 
 .what-you-will-learn {
   display: flex;
@@ -365,7 +339,7 @@ background-color:#05368B;
   line-height: 32px;
 }
 
-.product-description > ul >li {
+.product-description > ul > li {
   list-style-type: decimal;
 }
 
@@ -375,7 +349,6 @@ background-color:#05368B;
   align-items: center;
   margin-top: 10px !important;
   justify-content: center;
-  
 
   margin: 0 80px;
 }
@@ -392,9 +365,8 @@ background-color:#05368B;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
-  background-color: #fffef7;
 
+  background-color: #fffef7;
 }
 
 .main-nav > div {
@@ -404,23 +376,22 @@ background-color:#05368B;
   justify-content: flex-end;
   flex: 1;
   padding-right: 20px;
- 
-  }
+}
 
 .main-nav-tab {
   padding: 20px 20px;
   list-style-type: none;
- text-decoration: none !important;
- cursor: pointer;
- background-color: #fffef7;
- color: black;
+  text-decoration: none !important;
+  cursor: pointer;
+  background-color: #fffef7;
+  color: black;
 }
 
-.nav-logo{
-   width: 140px;
-    height: 60px;
-    object-fit: contain;
-    margin-left: 20px;
+.nav-logo {
+  width: 140px;
+  height: 60px;
+  object-fit: contain;
+  margin-left: 20px;
 }
 
 #navbarNavAltMarkup {
@@ -435,7 +406,7 @@ background-color:#05368B;
 }
 
 .nav-link {
- position: relative !important;
+  position: relative !important;
 }
 
 .navbar {
@@ -448,24 +419,24 @@ background-color:#05368B;
 }
 
 .list-unstyled > li > a {
-  color : #FFE400 !important ;
-  
+  color: #ffe400 !important ;
 }
 
-.fa-facebook , .fa-instagram {
+.fa-facebook,
+.fa-instagram {
   padding: 0 5px !important;
   font-size: 20px !important;
-  color: #FFE400;
+  color: #ffe400;
 }
 
 #c {
-  background-color: #05386B;
+  background-color: #05386b;
   margin-bottom: 20px;
   padding: 50px 0;
   /* text-align: center; */
 }
 
-.service-we-offer{
+.service-we-offer {
   color: #f5f4f0;
 }
 
@@ -480,7 +451,7 @@ background-color:#05368B;
   margin-bottom: 50px;
 }
 
-.post-entry > h1{
+.post-entry > h1 {
   font-family: serif !important;
   color: #f5f4f0;
   font-size: 75px;
