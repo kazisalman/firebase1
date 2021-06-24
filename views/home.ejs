@@ -23,6 +23,33 @@
 </head>
 
 <body>
+    <script>
+        $(document).ready(function() {
+  $("#myCarousel").on("slide.bs.carousel", function(e) {
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 4;
+    var totalItems = $(".carousel-item").length;
+
+    if (idx >= totalItems - (itemsPerSlide - 1)) {
+      var it = itemsPerSlide - (totalItems - idx);
+      for (var i = 0; i < it; i++) {
+        // append slides to end
+        if (e.direction == "left") {
+          $(".carousel-item")
+            .eq(i)
+            .appendTo(".carousel-inner");
+        } else {
+          $(".carousel-item")
+            .eq(0)
+            .appendTo($(this).find(".carousel-inner"));
+        }
+      }
+    }
+  });
+});
+
+    </script>
     <div class="topnav" id="myTopnav">
         <img src="/images/logo1.png" id="logo" />
 
@@ -39,7 +66,7 @@
     <div class="container-fluid pt-5 " id="slider">
         <div class="row">
             <div class="col">
-                <h1 class="ml-5">Welcome to Insights4all</h1>
+                <h1 class="ml-5">Welcome to Insights4all Programming Classes</h1>
                 <p class="ml-5">Upgrade your Skills with Live Mentoring</p>
                 <a href="allcourses" class="btn btn-outline-light mt-3 ml-5">See All Courses</a>
             </div>
@@ -67,23 +94,23 @@
     <!-- ----------------COURSE-BODY STARTS--------------------->
 
     <div class="row text-center ml-5 mt-5 mr-5">
-        <div class="col border p-4 ml-2 mt-2 rounded" id="content">
+        <div class="col border border-dark p-4 ml-2 mt-2 rounded" id="content">
             <img class="img-responsive" src="/images/live2.jpg" />
             <h5>Live Classes</h5>
             <p>Attend Our Live Sessions which dives you deep through programming concepts with hands on coding.</p>
 
         </div>
-        <div class="col border p-4 ml-2 mt-2 rounded" id="content">
+        <div class="col border border-dark p-4 ml-2 mt-2 rounded" id="content">
             <img class="img-responsive" src="/images/Queries.jpg" />
             <h5>Ask Your Queries</h5>
             <p>Get Personalized attention with concepts clarified by our mentor at your convinient schedule.</p>
         </div>
-        <div class="col-sm-3 border p-4 ml-2 mt-2 rounded" id="content">
+        <div class="col-sm-3 border border-dark p-4 ml-2 mt-2 rounded" id="content">
             <img class="img-responsive" src="/images/project.jpg" />
             <h5>Build Projects</h5>
             <p>Create Real Word Projects to boost your resume</p>
         </div>
-        <div class="col-sm-3 border p-4 ml-2 mt-2 rounded" id="content">
+        <div class="col-sm-3 border border-dark p-4 ml-2 mt-2 rounded" id="content">
             <img class="img-responsive" src="/images/certi.jpg" style="height:130px;width:180px;" />
 
             <h5>Completion Certificate</h5>
@@ -92,13 +119,86 @@
 
     </div>
     </div>
+    <h3 class="text-center mt-4 coursetitle">Testimonials</h3>
+    <hr style="height:2px;border-width:2px;background-color:#053680;width:200px;">
+    <div class="container-fluid">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto">
+            <div class="carousel-item col-md-3 active">
+              <div class="card border-primary" id="feedbackcard">
+                <div class="card-body">
+                    <h5 class="card-title text-dark" id="feedback">"I used to hate java"</h5>
+                    <p class="card-text">Before taking this course i use to hate java , now its my favorite language 
+                        All thanks to my mentor thank you , really thank you a lot. .</p>
+                    <p class="card-text" id="name"> -- Zaki ur rahman, India</p>
+                  </div>
+       
+              </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card border-primary" id="feedbackcard">
+                <div class="card-body">
+                    <h5 class="card-title text-dark" id="feedback">"Mentor helped me alot"</h5>
+                    <p class="card-text">This is my first online course. I started learning c programming with zero knowledge.My mentor Ms. Safia helped me a lot in learning this. 
+                    </p>
+                    <p class="card-text" id="name"> -- P. Manaswini , India</p>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card border-primary" id="feedbackcard">
+                <div class="card-body">
+                    <h5 class="card-title text-dark" id="feedback">"I build entire website from scratch"</h5>
+                    <p class="card-text">Mentor helped me with building an entire website from scratch.I would 100% recommend web development course.</p>
+                    <p class="card-text" id="name"> -- Dhruv , London</p>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card border-primary" id="feedbackcard">
+                <div class="card-body">
+                    <h5 class="card-title text-dark" id="feedback">"Learning is different here"</h6>
+                    <p class="card-text">Many courses are available online,but I observed there are sheer differences while learning with Insight4all Mentor.My doubts are clarified with utmost attention.</p>
+                    <p class="card-text" id="name"> -- Faizal Khan , India</p>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card border-primary" id="feedbackcard">
+                <div class="card-body">
+                    <h6 class="card-title text-dark" id="feedback">"Assignments were helpful"</h6>
+                    <p class="card-text">Very good experience.Assignments given to us are very helpful.</p>
+                    <p class="card-text" id="name"> -- Yasaswini , India</p>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3">
+              <div class="card border-primary" id="feedbackcard">
+                <div class="card-body">
+                    <h6 class="card-title text-dark" id="feedback">"Informative Session"</h6>
+                    <p class="card-text">Every session was very informative and mentor provided was very helpful.</p>
+                    <p class="card-text" id="name">Tanveer Ahmed</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
     <!--------Courses------>
 
     <h3 class="text-center mt-4 coursetitle">Courses</h3>
     <hr style="height:2px;border-width:2px;background-color:#053680;width:200px;">
     <div class="row ml-2 mt-3 mr-2 p-4 myrow">
         <%  courses.forEach(function(course){ %>
-        <div class="col border p-3 mt-2 ml-4 mr-5 rounded bg-white" id="content">
+        <div class="col border border-dark p-3 mt-2 ml-4 mr-5 rounded bg-white" id="content">
             <div class="text-center">
                 <a class="course-link" href="/abc/<%=course._id%>">
                     <img class="img-responsive" src="<%=course.image_add%>" style="height:130px;width:200px;" /></div>
